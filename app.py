@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import requests
-from config import OPENROUTER_KEY
+import os
+OPENROUTER_KEY = os.environ.get("OPENROUTER_KEY")
 
 app = Flask(__name__)
 
